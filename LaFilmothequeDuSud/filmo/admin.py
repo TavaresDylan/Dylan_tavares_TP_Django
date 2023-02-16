@@ -13,7 +13,7 @@ class ScriptAdmin(admin.ModelAdmin):
 admin.site.register(Script, ScriptAdmin)
 
 class DirectorAdmin(admin.ModelAdmin):
-    list_display = ['id', 'firstname', 'lastname', 'age']
+    list_display = ['id', 'firstname', 'lastname', 'age', 'country']
 
 admin.site.register(Director, DirectorAdmin)
 
@@ -23,6 +23,6 @@ class ActorAdmin(admin.ModelAdmin):
 admin.site.register(Actor, ActorAdmin)
 
 class PlayAdmin(admin.ModelAdmin):
-    list_display = ['id', 'id_movie', 'id_actor']
+    list_display = ['id']
 
 admin.site.register(Play, PlayAdmin)

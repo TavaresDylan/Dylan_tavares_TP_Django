@@ -1,7 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from filmo.views import DirectorViewSet, ActorViewSet, MovieViewSet, ScriptViewSet
+from filmo.views import (
+    DirectorViewSet,
+    ActorViewSet,
+    MovieViewSet,
+    ScriptViewSet,
+    PlayViewSet,
+)
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -13,6 +19,7 @@ router.register('director', DirectorViewSet, basename='Directors')
 router.register('actor', ActorViewSet, basename='Actors')
 router.register('movie', MovieViewSet, basename='Movies')
 router.register('script', ScriptViewSet, basename='Scripts')
+router.register('play', PlayViewSet, basename='PlayedIn')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
